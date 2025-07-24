@@ -3,19 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entegroloji - Entegrasyon Çözümleri</title>
+    <title>Entegroloji - Entegrasyon Çözümleri | API, Veri Senkronizasyonu, Bulut Entegrasyonu</title>
+    <meta name="description" content="Entegroloji ile işletmenizin sistemlerini birleştirin. API entegrasyonu, veri senkronizasyonu, bulut entegrasyonu ve özel çözümler.">
+    <meta name="keywords" content="entegrasyon, API, veri senkronizasyonu, bulut entegrasyonu, iş zekası, güvenlik">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-logo">
                 <h2>Entegroloji</h2>
             </div>
-            <ul class="nav-menu">
+            <div class="loading-spinner">
+                <div class="spinner"></div>
+            </div>
+            <p>Yükleniyor...</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2><i class="fas fa-cube"></i> Entegroloji</h2>
+            </div>
+            <ul class="nav-menu" id="navMenu">
                 <li class="nav-item">
                     <a href="#home" class="nav-link">Ana Sayfa</a>
                 </li>
@@ -23,44 +40,91 @@
                     <a href="#services" class="nav-link">Hizmetler</a>
                 </li>
                 <li class="nav-item">
+                    <a href="#features" class="nav-link">Özellikler</a>
+                </li>
+                <li class="nav-item">
                     <a href="#about" class="nav-link">Hakkımızda</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#testimonials" class="nav-link">Referanslar</a>
                 </li>
                 <li class="nav-item">
                     <a href="#contact" class="nav-link">İletişim</a>
                 </li>
             </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+            <div class="nav-buttons">
+                <button class="btn btn-outline" onclick="openDemoModal()">Demo İste</button>
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-particles" id="heroParticles"></div>
+        </div>
         <div class="hero-container">
             <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-star"></i>
+                    <span>5+ Yıllık Deneyim</span>
+                </div>
                 <h1 class="hero-title">
                     Entegrasyon Çözümleri ile
                     <span class="highlight">Geleceği Şekillendirin</span>
                 </h1>
                 <p class="hero-description">
-                    Entegroloji ile işletmenizin sistemlerini birleştirin, verimliliği artırın ve dijital dönüşümünüzü hızlandırın.
+                    Entegroloji ile işletmenizin sistemlerini birleştirin, verimliliği artırın ve dijital dönüşümünüzü hızlandırın. 
+                    Modern teknolojiler ve uzman ekibimizle size özel çözümler sunuyoruz.
                 </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="500">0</span>
+                        <span class="stat-label">Başarılı Proje</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="200">0</span>
+                        <span class="stat-label">Mutlu Müşteri</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="99">0</span>
+                        <span class="stat-label">% Başarı Oranı</span>
+                    </div>
+                </div>
                 <div class="hero-buttons">
-                    <a href="#services" class="btn btn-primary">Hizmetlerimizi Keşfedin</a>
-                    <a href="#contact" class="btn btn-secondary">Ücretsiz Danışmanlık</a>
+                    <a href="#services" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i>
+                        Hizmetlerimizi Keşfedin
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fas fa-phone"></i>
+                        Ücretsiz Danışmanlık
+                    </a>
                 </div>
             </div>
             <div class="hero-image">
                 <div class="integration-animation">
-                    <div class="circle circle-1"></div>
-                    <div class="circle circle-2"></div>
-                    <div class="circle circle-3"></div>
+                    <div class="circle circle-1">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="circle circle-2">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <div class="circle circle-3">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
                     <div class="connection-line"></div>
+                    <div class="data-flow"></div>
                 </div>
             </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
         </div>
     </section>
 
@@ -68,51 +132,161 @@
     <section id="services" class="services">
         <div class="container">
             <div class="section-header">
-                <h2>Hizmetlerimiz</h2>
-                <p>İşletmenizin ihtiyaçlarına özel entegrasyon çözümleri</p>
+                <div class="section-badge">
+                    <i class="fas fa-cogs"></i>
+                    <span>Hizmetlerimiz</span>
+                </div>
+                <h2>Entegrasyon Çözümlerimiz</h2>
+                <p>İşletmenizin ihtiyaçlarına özel, modern ve güvenilir entegrasyon çözümleri</p>
             </div>
             <div class="services-grid">
-                <div class="service-card">
+                <div class="service-card" data-aos="fade-up">
                     <div class="service-icon">
                         <i class="fas fa-plug"></i>
                     </div>
                     <h3>API Entegrasyonu</h3>
-                    <p>Farklı sistemler arasında güvenli ve hızlı veri akışı sağlayan API entegrasyon çözümleri.</p>
+                    <p>Farklı sistemler arasında güvenli ve hızlı veri akışı sağlayan RESTful ve GraphQL API entegrasyon çözümleri.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> RESTful API Geliştirme</li>
+                        <li><i class="fas fa-check"></i> GraphQL Entegrasyonu</li>
+                        <li><i class="fas fa-check"></i> API Güvenlik</li>
+                    </ul>
+                    <a href="#contact" class="service-link">Detaylar <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="service-card">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-icon">
                         <i class="fas fa-database"></i>
                     </div>
                     <h3>Veri Senkronizasyonu</h3>
-                    <p>Verilerinizin tüm sistemlerde tutarlı ve güncel kalmasını sağlayan senkronizasyon hizmetleri.</p>
+                    <p>Verilerinizin tüm sistemlerde tutarlı ve güncel kalmasını sağlayan real-time senkronizasyon hizmetleri.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Real-time Senkronizasyon</li>
+                        <li><i class="fas fa-check"></i> Veri Doğrulama</li>
+                        <li><i class="fas fa-check"></i> Conflict Resolution</li>
+                    </ul>
+                    <a href="#contact" class="service-link">Detaylar <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="service-card">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="service-icon">
                         <i class="fas fa-cloud"></i>
                     </div>
                     <h3>Bulut Entegrasyonu</h3>
-                    <p>Bulut tabanlı sistemlerinizi mevcut altyapınızla sorunsuz bir şekilde entegre edin.</p>
+                    <p>Bulut tabanlı sistemlerinizi mevcut altyapınızla sorunsuz bir şekilde entegre edin ve ölçeklenebilirlik sağlayın.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> AWS Entegrasyonu</li>
+                        <li><i class="fas fa-check"></i> Azure Bağlantısı</li>
+                        <li><i class="fas fa-check"></i> Google Cloud</li>
+                    </ul>
+                    <a href="#contact" class="service-link">Detaylar <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="service-card">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="service-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
                     <h3>İş Zekası Entegrasyonu</h3>
-                    <p>Verilerinizi analiz ederek iş kararlarınızı destekleyen akıllı entegrasyon çözümleri.</p>
+                    <p>Verilerinizi analiz ederek iş kararlarınızı destekleyen akıllı entegrasyon ve raporlama çözümleri.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Veri Analizi</li>
+                        <li><i class="fas fa-check"></i> Dashboard Entegrasyonu</li>
+                        <li><i class="fas fa-check"></i> Predictive Analytics</li>
+                    </ul>
+                    <a href="#contact" class="service-link">Detaylar <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="service-card">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
                     <div class="service-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
                     <h3>Güvenlik Entegrasyonu</h3>
-                    <p>En yüksek güvenlik standartlarıyla korunan entegrasyon altyapısı.</p>
+                    <p>En yüksek güvenlik standartlarıyla korunan, şifreli ve güvenli entegrasyon altyapısı.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> End-to-End Şifreleme</li>
+                        <li><i class="fas fa-check"></i> OAuth 2.0</li>
+                        <li><i class="fas fa-check"></i> GDPR Uyumluluğu</li>
+                    </ul>
+                    <a href="#contact" class="service-link">Detaylar <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="service-card">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="500">
                     <div class="service-icon">
                         <i class="fas fa-cogs"></i>
                     </div>
                     <h3>Özel Çözümler</h3>
-                    <p>İşletmenizin özel ihtiyaçlarına göre tasarlanmış entegrasyon çözümleri.</p>
+                    <p>İşletmenizin özel ihtiyaçlarına göre tasarlanmış, ölçeklenebilir entegrasyon çözümleri.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Özel Geliştirme</li>
+                        <li><i class="fas fa-check"></i> Mikroservis Mimarisi</li>
+                        <li><i class="fas fa-check"></i> DevOps Entegrasyonu</li>
+                    </ul>
+                    <a href="#contact" class="service-link">Detaylar <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-star"></i>
+                    <span>Özellikler</span>
+                </div>
+                <h2>Neden Entegroloji?</h2>
+                <p>Modern teknolojiler ve uzman ekibimizle size en iyi entegrasyon deneyimini sunuyoruz</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-item" data-aos="fade-right">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Hızlı Entegrasyon</h3>
+                        <p>Modern araçlar ve metodolojilerle hızlı ve etkili entegrasyon süreçleri.</p>
+                    </div>
+                </div>
+                <div class="feature-item" data-aos="fade-left">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Güvenlik Odaklı</h3>
+                        <p>En yüksek güvenlik standartlarıyla korunan veri ve sistem entegrasyonları.</p>
+                    </div>
+                </div>
+                <div class="feature-item" data-aos="fade-right">
+                    <div class="feature-icon">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Ölçeklenebilir</h3>
+                        <p>İşletmenizin büyümesine uygun, esnek ve ölçeklenebilir çözümler.</p>
+                    </div>
+                </div>
+                <div class="feature-item" data-aos="fade-left">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>7/24 Destek</h3>
+                        <p>Teknik destek ve danışmanlık hizmetleri ile her zaman yanınızdayız.</p>
+                    </div>
+                </div>
+                <div class="feature-item" data-aos="fade-right">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Performans İzleme</h3>
+                        <p>Gerçek zamanlı performans izleme ve optimizasyon araçları.</p>
+                    </div>
+                </div>
+                <div class="feature-item" data-aos="fade-left">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Uzman Ekip</h3>
+                        <p>Deneyimli ve sertifikalı entegrasyon uzmanlarından oluşan ekibimiz.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -122,32 +296,151 @@
     <section id="about" class="about">
         <div class="container">
             <div class="about-content">
-                <div class="about-text">
+                <div class="about-text" data-aos="fade-right">
+                    <div class="section-badge">
+                        <i class="fas fa-info-circle"></i>
+                        <span>Hakkımızda</span>
+                    </div>
                     <h2>Entegroloji Hakkında</h2>
                     <p>Entegroloji, işletmelerin dijital dönüşüm süreçlerinde güvenilir bir partner olarak, en son teknolojileri kullanarak entegrasyon çözümleri sunar.</p>
-                    <p>Deneyimli ekibimiz, her sektörden işletmenin ihtiyaçlarını anlayarak, özel entegrasyon çözümleri geliştirir ve uygular.</p>
-                    <div class="stats">
+                    <p>Deneyimli ekibimiz, her sektörden işletmenin ihtiyaçlarını anlayarak, özel entegrasyon çözümleri geliştirir ve uygular. Modern teknolojiler ve agile metodolojiler kullanarak, hızlı ve etkili çözümler üretiyoruz.</p>
+                    <div class="about-stats">
                         <div class="stat">
-                            <h3>100+</h3>
+                            <h3 class="counter" data-target="500">0</h3>
                             <p>Başarılı Proje</p>
                         </div>
                         <div class="stat">
-                            <h3>50+</h3>
+                            <h3 class="counter" data-target="200">0</h3>
                             <p>Mutlu Müşteri</p>
                         </div>
                         <div class="stat">
-                            <h3>5+</h3>
+                            <h3 class="counter" data-target="5">0</h3>
                             <p>Yıllık Deneyim</p>
+                        </div>
+                        <div class="stat">
+                            <h3 class="counter" data-target="99">0</h3>
+                            <p>% Başarı Oranı</p>
+                        </div>
+                    </div>
+                    <div class="about-buttons">
+                        <a href="#contact" class="btn btn-primary">Bizimle Çalışın</a>
+                        <a href="#" class="btn btn-outline">Portföyümüzü İnceleyin</a>
+                    </div>
+                </div>
+                <div class="about-image" data-aos="fade-left">
+                    <div class="team-illustration">
+                        <div class="person person-1">
+                            <div class="person-avatar"></div>
+                            <div class="person-info">
+                                <h4>Ahmet Yılmaz</h4>
+                                <p>Baş Entegrasyon Uzmanı</p>
+                            </div>
+                        </div>
+                        <div class="person person-2">
+                            <div class="person-avatar"></div>
+                            <div class="person-info">
+                                <h4>Ayşe Demir</h4>
+                                <p>API Geliştirici</p>
+                            </div>
+                        </div>
+                        <div class="person person-3">
+                            <div class="person-avatar"></div>
+                            <div class="person-info">
+                                <h4>Mehmet Kaya</h4>
+                                <p>DevOps Mühendisi</p>
+                            </div>
+                        </div>
+                        <div class="connection-lines"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-quote-left"></i>
+                    <span>Referanslar</span>
+                </div>
+                <h2>Müşterilerimiz Ne Diyor?</h2>
+                <p>Başarılı entegrasyon projelerimiz ve memnun müşterilerimiz</p>
+            </div>
+            <div class="testimonials-slider" id="testimonialsSlider">
+                <div class="testimonial-card" data-aos="fade-up">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Entegroloji ile yaptığımız API entegrasyonu sayesinde veri akışımız %300 hızlandı. Profesyonel ekip ve kaliteli hizmet."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Fatma Özkan</h4>
+                            <p>CTO, TechCorp</p>
                         </div>
                     </div>
                 </div>
-                <div class="about-image">
-                    <div class="team-illustration">
-                        <div class="person person-1"></div>
-                        <div class="person person-2"></div>
-                        <div class="person person-3"></div>
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Bulut entegrasyonu projemizde mükemmel bir iş çıkardılar. Hızlı, güvenilir ve ölçeklenebilir çözümler."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Can Yıldız</h4>
+                            <p>IT Manager, DataFlow</p>
+                        </div>
                     </div>
                 </div>
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Veri senkronizasyonu çözümümüz ile operasyonel verimliliğimiz %150 arttı. Kesinlikle tavsiye ederim."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Zeynep Arslan</h4>
+                            <p>Operations Director, LogiTech</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonials-nav">
+                <button class="nav-btn prev" id="prevBtn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="nav-dots" id="navDots"></div>
+                <button class="nav-btn next" id="nextBtn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
             </div>
         </div>
     </section>
@@ -156,47 +449,108 @@
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-header">
-                <h2>İletişime Geçin</h2>
-                <p>Projeleriniz için bizimle iletişime geçin</p>
+                <div class="section-badge">
+                    <i class="fas fa-envelope"></i>
+                    <span>İletişim</span>
+                </div>
+                <h2>Bizimle İletişime Geçin</h2>
+                <p>Projeleriniz için ücretsiz danışmanlık ve fiyat teklifi alın</p>
             </div>
             <div class="contact-content">
-                <div class="contact-info">
+                <div class="contact-info" data-aos="fade-right">
                     <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
                             <h4>E-posta</h4>
                             <p>info@entegroloji.com</p>
+                            <p>support@entegroloji.com</p>
                         </div>
                     </div>
                     <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
                             <h4>Telefon</h4>
                             <p>+90 (212) 555 0123</p>
+                            <p>+90 (532) 123 4567</p>
                         </div>
                     </div>
                     <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
                             <h4>Adres</h4>
-                            <p>İstanbul, Türkiye</p>
+                            <p>Levent Mahallesi, Büyükdere Caddesi</p>
+                            <p>No: 123, Şişli, İstanbul, Türkiye</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Çalışma Saatleri</h4>
+                            <p>Pazartesi - Cuma: 09:00 - 18:00</p>
+                            <p>Cumartesi: 10:00 - 14:00</p>
                         </div>
                     </div>
                 </div>
-                <form class="contact-form">
-                    <div class="form-group">
-                        <input type="text" placeholder="Adınız" required>
+                <form class="contact-form" data-aos="fade-left" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Adınız *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-posta Adresiniz *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Telefon</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Şirket</label>
+                            <input type="text" id="company" name="company">
+                        </div>
                     </div>
                     <div class="form-group">
-                        <input type="email" placeholder="E-posta Adresiniz" required>
+                        <label for="service">Hizmet Türü</label>
+                        <select id="service" name="service">
+                            <option value="">Seçiniz</option>
+                            <option value="api">API Entegrasyonu</option>
+                            <option value="data">Veri Senkronizasyonu</option>
+                            <option value="cloud">Bulut Entegrasyonu</option>
+                            <option value="bi">İş Zekası Entegrasyonu</option>
+                            <option value="security">Güvenlik Entegrasyonu</option>
+                            <option value="custom">Özel Çözümler</option>
+                        </select>
                     </div>
                     <div class="form-group">
-                        <input type="text" placeholder="Konu" required>
+                        <label for="subject">Konu *</label>
+                        <input type="text" id="subject" name="subject" required>
                     </div>
                     <div class="form-group">
-                        <textarea placeholder="Mesajınız" rows="5" required></textarea>
+                        <label for="message">Mesajınız *</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Mesaj Gönder</button>
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" required>
+                            <span class="checkmark"></span>
+                            <span>Kişisel verilerimin işlenmesini kabul ediyorum</span>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i>
+                        Mesaj Gönder
+                    </button>
                 </form>
             </div>
         </div>
@@ -207,8 +561,17 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>Entegroloji</h3>
-                    <p>Entegrasyon çözümleri ile işletmenizin geleceğini şekillendirin.</p>
+                    <div class="footer-logo">
+                        <h3><i class="fas fa-cube"></i> Entegroloji</h3>
+                    </div>
+                    <p>Entegrasyon çözümleri ile işletmenizin geleceğini şekillendirin. Modern teknolojiler ve uzman ekibimizle size en iyi hizmeti sunuyoruz.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
                 </div>
                 <div class="footer-section">
                     <h4>Hizmetler</h4>
@@ -217,32 +580,110 @@
                         <li><a href="#services">Veri Senkronizasyonu</a></li>
                         <li><a href="#services">Bulut Entegrasyonu</a></li>
                         <li><a href="#services">İş Zekası</a></li>
+                        <li><a href="#services">Güvenlik Entegrasyonu</a></li>
+                        <li><a href="#services">Özel Çözümler</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Şirket</h4>
                     <ul>
                         <li><a href="#about">Hakkımızda</a></li>
+                        <li><a href="#testimonials">Referanslar</a></li>
                         <li><a href="#contact">İletişim</a></li>
                         <li><a href="#">Kariyer</a></li>
                         <li><a href="#">Blog</a></li>
+                        <li><a href="#">Basın</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Sosyal Medya</h4>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    <h4>Destek</h4>
+                    <ul>
+                        <li><a href="#">Dokümantasyon</a></li>
+                        <li><a href="#">API Referansı</a></li>
+                        <li><a href="#">SSS</a></li>
+                        <li><a href="#">Teknik Destek</a></li>
+                        <li><a href="#">Eğitim</a></li>
+                        <li><a href="#">Topluluk</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>İletişim</h4>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-envelope"></i> info@entegroloji.com</p>
+                        <p><i class="fas fa-phone"></i> +90 (212) 555 0123</p>
+                        <p><i class="fas fa-map-marker-alt"></i> İstanbul, Türkiye</p>
+                    </div>
+                    <div class="newsletter">
+                        <h5>Bültenimize Katılın</h5>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="E-posta adresiniz">
+                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </form>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Entegroloji. Tüm hakları saklıdır.</p>
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 Entegroloji. Tüm hakları saklıdır.</p>
+                    <div class="footer-links">
+                        <a href="#">Gizlilik Politikası</a>
+                        <a href="#">Kullanım Şartları</a>
+                        <a href="#">Çerez Politikası</a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
+
+    <!-- Demo Modal -->
+    <div class="modal" id="demoModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Demo Talep Formu</h3>
+                <button class="modal-close" onclick="closeDemoModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="demoForm">
+                    <div class="form-group">
+                        <label for="demoName">Adınız *</label>
+                        <input type="text" id="demoName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="demoEmail">E-posta *</label>
+                        <input type="email" id="demoEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="demoCompany">Şirket</label>
+                        <input type="text" id="demoCompany">
+                    </div>
+                    <div class="form-group">
+                        <label for="demoService">İlgilendiğiniz Hizmet</label>
+                        <select id="demoService">
+                            <option value="">Seçiniz</option>
+                            <option value="api">API Entegrasyonu</option>
+                            <option value="data">Veri Senkronizasyonu</option>
+                            <option value="cloud">Bulut Entegrasyonu</option>
+                            <option value="bi">İş Zekası</option>
+                            <option value="security">Güvenlik</option>
+                            <option value="custom">Özel Çözümler</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="demoMessage">Mesajınız</label>
+                        <textarea id="demoMessage" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Demo Talep Et</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
 
     <script src="script.js"></script>
 </body>
