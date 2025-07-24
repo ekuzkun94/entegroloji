@@ -570,6 +570,179 @@ body {
     background: var(--bg-secondary);
 }
 
+/* ERP Integrations Section */
+.erp-section {
+    margin-bottom: 4rem;
+}
+
+.section-subheader {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-subheader h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.section-subheader h3 i {
+    color: var(--primary-color);
+}
+
+.section-subheader p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.erp-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.erp-card {
+    background: var(--bg-primary);
+    padding: 2rem;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    border: 1px solid var(--border-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.erp-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--gradient-primary);
+    transform: scaleX(0);
+    transition: var(--transition);
+}
+
+.erp-card:hover::before {
+    transform: scaleX(1);
+}
+
+.erp-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--primary-color);
+}
+
+.erp-logo {
+    width: 60px;
+    height: 60px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.erp-logo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-secondary);
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.erp-card:hover .erp-logo::before {
+    opacity: 1;
+}
+
+.erp-logo i {
+    font-size: 1.8rem;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.erp-card h4 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+}
+
+.erp-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.erp-features {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.erp-features li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.erp-features i {
+    color: var(--accent-color);
+    font-size: 0.8rem;
+    flex-shrink: 0;
+}
+
+.erp-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.erp-badge.enterprise {
+    background: var(--gradient-primary);
+    color: white;
+}
+
+.erp-badge.popular {
+    background: var(--gradient-secondary);
+    color: var(--text-primary);
+}
+
+.erp-badge.growing {
+    background: var(--gradient-accent);
+    color: white;
+}
+
+.erp-badge.custom {
+    background: linear-gradient(135deg, #8b5cf6, #a855f7);
+    color: white;
+}
+
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -1523,6 +1696,19 @@ body {
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
+    }
+    
+    .erp-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .erp-card {
+        padding: 1.5rem;
+    }
+    
+    .section-subheader h3 {
+        font-size: 1.5rem;
     }
 
     .nav-menu {
