@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hakkımızda - Entegroloji | Entegrasyon Uzmanları</title>
+    <meta name="description" content="Entegroloji hakkında detaylı bilgi. Misyonumuz, vizyonumuz, ekibimiz ve başarılarımız hakkında bilgi edinin.">
+    <meta name="keywords" content="entegroloji, hakkımızda, misyon, vizyon, ekip, başarılar, entegrasyon uzmanları">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <i class="fas fa-cogs"></i>
+            </div>
+            <div class="loading-text">Entegroloji</div>
+            <div class="loading-spinner"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <i class="fas fa-cogs"></i>
+                    <span>Entegroloji</span>
+                </a>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Ana Sayfa</a>
+                </li>
+                <li class="nav-item">
+                    <a href="services.html" class="nav-link">Hizmetler</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link active">Hakkımızda</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">İletişim</a>
+                </li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="btn btn-primary" onclick="openDemoModal()">Demo İste</button>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="header-content">
+            <div class="breadcrumb">
+                <a href="index.html">Ana Sayfa</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Hakkımızda</span>
+            </div>
+            <h1>Hakkımızda</h1>
+            <p>Entegrasyon teknolojilerinde uzmanlaşmış ekibimizle işletmenizi dijital dönüşüme hazırlıyoruz</p>
+        </div>
+    </section>
+
+    <!-- About Hero -->
+    <section class="about-hero">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <h2>Entegroloji'yi Tanıyın</h2>
+                    <p class="lead">2018 yılından bu yana, işletmelerin dijital dönüşüm süreçlerinde güvenilir partner olarak hizmet veriyoruz. Modern teknolojiler ve uzman ekibimizle, karmaşık entegrasyon ihtiyaçlarınızı basit ve etkili çözümlere dönüştürüyoruz.</p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="150">0</div>
+                            <div class="stat-label">Başarılı Proje</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="50">0</div>
+                            <div class="stat-label">Mutlu Müşteri</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="5">0</div>
+                            <div class="stat-label">Yıllık Deneyim</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image" data-aos="fade-left">
+                    <div class="image-placeholder">
+                        <i class="fas fa-users"></i>
+                        <p>Ekibimiz</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="mission-vision">
+        <div class="container">
+            <div class="mv-grid">
+                <div class="mv-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="mv-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Misyonumuz</h3>
+                    <p>İşletmelerin dijital dönüşüm süreçlerinde, modern entegrasyon teknolojileri ile verimliliği artırmak ve operasyonel süreçleri optimize etmek. Müşterilerimizin iş süreçlerini kolaylaştırarak, rekabet avantajı elde etmelerini sağlamak.</p>
+                </div>
+                <div class="mv-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="mv-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Vizyonumuz</h3>
+                    <p>Türkiye'nin önde gelen entegrasyon teknolojileri şirketi olmak. Yenilikçi çözümlerimizle sektörde standart belirleyen, güvenilir ve sürdürülebilir teknoloji partneri olmak. Global pazarda da tanınan bir marka haline gelmek.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values -->
+    <section class="values-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Değerlerimiz</h2>
+                <p>Çalışma prensiplerimizi ve değerlerimizi keşfedin</p>
+            </div>
+            <div class="values-grid">
+                <div class="value-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="value-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4>Güvenilirlik</h4>
+                    <p>Müşterilerimizin verilerini ve iş süreçlerini en üst düzeyde güvenlikle koruyoruz.</p>
+                </div>
+                <div class="value-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="value-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h4>Yenilikçilik</h4>
+                    <p>Sürekli gelişen teknolojileri takip ederek, en güncel çözümleri sunuyoruz.</p>
+                </div>
+                <div class="value-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="value-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h4>İş Ortaklığı</h4>
+                    <p>Müşterilerimizle uzun vadeli iş ortaklıkları kurarak, sürdürülebilir değer yaratıyoruz.</p>
+                </div>
+                <div class="value-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="value-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h4>Kalite</h4>
+                    <p>Her projede en yüksek kalite standartlarını uygulayarak, mükemmel sonuçlar elde ediyoruz.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team -->
+    <section class="team-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Ekibimiz</h2>
+                <p>Uzman kadromuzla tanışın</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="team-avatar">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h4>Ahmet Yılmaz</h4>
+                    <p class="team-position">Kurucu & CEO</p>
+                    <p class="team-description">10+ yıl entegrasyon teknolojileri deneyimi. SAP, Oracle ve Microsoft teknolojilerinde uzman.</p>
+                </div>
+                <div class="team-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="team-avatar">
+                        <i class="fas fa-user-cog"></i>
+                    </div>
+                    <h4>Mehmet Demir</h4>
+                    <p class="team-position">Teknik Direktör</p>
+                    <p class="team-description">API geliştirme ve sistem entegrasyonları konusunda uzman. 8+ yıl deneyim.</p>
+                </div>
+                <div class="team-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="team-avatar">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h4>Ayşe Kaya</h4>
+                    <p class="team-position">Proje Yöneticisi</p>
+                    <p class="team-description">Proje yönetimi ve müşteri ilişkileri konusunda deneyimli. PMP sertifikalı.</p>
+                </div>
+                <div class="team-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="team-avatar">
+                        <i class="fas fa-user-code"></i>
+                    </div>
+                    <h4>Can Özkan</h4>
+                    <p class="team-position">Kıdemli Geliştirici</p>
+                    <p class="team-description">Full-stack geliştirme ve veritabanı yönetimi uzmanı. 6+ yıl deneyim.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements -->
+    <section class="achievements-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Başarılarımız</h2>
+                <p>Gurur duyduğumuz başarılarımız</p>
+            </div>
+            <div class="achievements-grid">
+                <div class="achievement-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="achievement-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h4>En İyi Entegrasyon Çözümü</h4>
+                    <p>2023 Teknoloji Ödülleri - Kategori Birincisi</p>
+                </div>
+                <div class="achievement-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="achievement-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h4>ISO 27001 Sertifikası</h4>
+                    <p>Bilgi Güvenliği Yönetim Sistemi Sertifikası</p>
+                </div>
+                <div class="achievement-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="achievement-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Müşteri Memnuniyeti</h4>
+                    <p>%98 Müşteri Memnuniyet Oranı</p>
+                </div>
+                <div class="achievement-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="achievement-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h4>Hızlı Büyüme</h4>
+                    <p>2022-2023 %150 Büyüme Oranı</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Projeleriniz İçin Bizimle İletişime Geçin</h2>
+                <p>Uzman ekibimizle tanışın ve projeleriniz için en uygun çözümü birlikte geliştirelim.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary">İletişime Geç</a>
+                    <button class="btn btn-secondary" onclick="openDemoModal()">Demo İste</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-cogs"></i>
+                        <span>Entegroloji</span>
+                    </div>
+                    <p>Entegrasyon teknolojilerinde uzmanlaşmış ekibimizle işletmenizi dijital dönüşüme hazırlıyoruz.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Hizmetler</h4>
+                    <ul>
+                        <li><a href="services.html">Tüm Hizmetler</a></li>
+                        <li><a href="erp-integrations.html">ERP Entegrasyonları</a></li>
+                        <li><a href="avm-integrations.html">AVM Entegrasyonları</a></li>
+                        <li><a href="services.html">API Entegrasyonu</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Şirket</h4>
+                    <ul>
+                        <li><a href="about.html">Hakkımızda</a></li>
+                        <li><a href="contact.html">İletişim</a></li>
+                        <li><a href="#">Kariyer</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>İletişim</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> İstanbul, Türkiye</p>
+                        <p><i class="fas fa-phone"></i> +90 (212) 555 0123</p>
+                        <p><i class="fas fa-envelope"></i> info@entegroloji.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Entegroloji. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Demo Modal -->
+    <div id="demoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeDemoModal()">&times;</span>
+            <h2>Demo Talep Formu</h2>
+            <form id="demoForm" class="demo-form">
+                <div class="form-group">
+                    <label for="demoName">Ad Soyad *</label>
+                    <input type="text" id="demoName" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="demoCompany">Şirket Adı *</label>
+                    <input type="text" id="demoCompany" name="company" required>
+                </div>
+                <div class="form-group">
+                    <label for="demoEmail">E-posta *</label>
+                    <input type="email" id="demoEmail" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="demoPhone">Telefon</label>
+                    <input type="tel" id="demoPhone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="demoService">İlgilendiğiniz Hizmet</label>
+                    <select id="demoService" name="service">
+                        <option value="">Seçiniz</option>
+                        <option value="erp">ERP Entegrasyonları</option>
+                        <option value="avm">AVM Entegrasyonları</option>
+                        <option value="api">API Entegrasyonu</option>
+                        <option value="data">Veri Senkronizasyonu</option>
+                        <option value="custom">Özel Çözüm</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="demoMessage">Mesajınız</label>
+                    <textarea id="demoMessage" name="message" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Demo Talep Et</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Back to Top -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html> 

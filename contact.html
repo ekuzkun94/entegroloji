@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim - Entegroloji | Entegrasyon Uzmanları</title>
+    <meta name="description" content="Entegroloji ile iletişime geçin. Adres, telefon, e-posta ve sosyal medya bilgilerimiz. Projeleriniz için bizimle iletişime geçin.">
+    <meta name="keywords" content="entegroloji, iletişim, adres, telefon, e-posta, sosyal medya, proje talebi">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <i class="fas fa-cogs"></i>
+            </div>
+            <div class="loading-text">Entegroloji</div>
+            <div class="loading-spinner"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <i class="fas fa-cogs"></i>
+                    <span>Entegroloji</span>
+                </a>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Ana Sayfa</a>
+                </li>
+                <li class="nav-item">
+                    <a href="services.html" class="nav-link">Hizmetler</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">Hakkımızda</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link active">İletişim</a>
+                </li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="btn btn-primary" onclick="openDemoModal()">Demo İste</button>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="header-content">
+            <div class="breadcrumb">
+                <a href="index.html">Ana Sayfa</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>İletişim</span>
+            </div>
+            <h1>İletişim</h1>
+            <p>Projeleriniz için bizimle iletişime geçin. Uzman ekibimiz size en uygun çözümü sunacaktır.</p>
+        </div>
+    </section>
+
+    <!-- Contact Hero -->
+    <section class="contact-hero">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <h2>Bizimle İletişime Geçin</h2>
+                    <p class="lead">Entegrasyon projeleriniz için uzman ekibimizle görüşün. Size en uygun çözümü birlikte geliştirelim.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Adres</h4>
+                                <p>Levent Mahallesi, Büyükdere Caddesi<br>No: 123, Kat: 5<br>34330 Beşiktaş/İstanbul</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Telefon</h4>
+                                <p>+90 (212) 555 0123</p>
+                                <p>+90 (212) 555 0124</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>E-posta</h4>
+                                <p>info@entegroloji.com</p>
+                                <p>destek@entegroloji.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Çalışma Saatleri</h4>
+                                <p>Pazartesi - Cuma: 09:00 - 18:00</p>
+                                <p>Cumartesi: 09:00 - 13:00</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-contact">
+                        <h4>Sosyal Medya</h4>
+                        <div class="social-links">
+                            <a href="#" class="social-link">
+                                <i class="fab fa-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-twitter"></i>
+                                <span>Twitter</span>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-facebook"></i>
+                                <span>Facebook</span>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-instagram"></i>
+                                <span>Instagram</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container" data-aos="fade-left">
+                    <div class="contact-form-card">
+                        <h3>Mesaj Gönderin</h3>
+                        <p>Projeleriniz hakkında bilgi almak için formu doldurun.</p>
+                        
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="contactName">Ad Soyad *</label>
+                                    <input type="text" id="contactName" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contactCompany">Şirket Adı *</label>
+                                    <input type="text" id="contactCompany" name="company" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="contactEmail">E-posta *</label>
+                                    <input type="email" id="contactEmail" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contactPhone">Telefon *</label>
+                                    <input type="tel" id="contactPhone" name="phone" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contactSubject">Konu *</label>
+                                <select id="contactSubject" name="subject" required>
+                                    <option value="">Seçiniz</option>
+                                    <option value="erp">ERP Entegrasyonu</option>
+                                    <option value="avm">AVM Entegrasyonu</option>
+                                    <option value="api">API Entegrasyonu</option>
+                                    <option value="data">Veri Senkronizasyonu</option>
+                                    <option value="consulting">Danışmanlık</option>
+                                    <option value="support">Teknik Destek</option>
+                                    <option value="other">Diğer</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contactMessage">Mesajınız *</label>
+                                <textarea id="contactMessage" name="message" rows="5" placeholder="Projeniz hakkında detaylı bilgi verin..." required></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="contactPrivacy" name="privacy" required>
+                                    <span class="checkmark"></span>
+                                    <span class="checkbox-text">Kişisel verilerimin işlenmesine izin veriyorum. <a href="#" class="privacy-link">Gizlilik Politikası</a></span>
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-full">
+                                <span class="btn-text">Mesaj Gönder</span>
+                                <span class="btn-loading" style="display: none;">
+                                    <i class="fas fa-spinner fa-spin"></i>
+                                    Gönderiliyor...
+                                </span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Office Locations -->
+    <section class="offices-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Ofislerimiz</h2>
+                <p>Türkiye genelinde hizmet verdiğimiz lokasyonlar</p>
+            </div>
+            <div class="offices-grid">
+                <div class="office-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="office-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h4>İstanbul - Merkez Ofis</h4>
+                    <p>Levent Mahallesi, Büyükdere Caddesi<br>No: 123, Kat: 5<br>34330 Beşiktaş/İstanbul</p>
+                    <div class="office-contact">
+                        <p><i class="fas fa-phone"></i> +90 (212) 555 0123</p>
+                        <p><i class="fas fa-envelope"></i> istanbul@entegroloji.com</p>
+                    </div>
+                </div>
+                
+                <div class="office-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="office-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h4>Ankara - Şube</h4>
+                    <p>Çankaya Mahallesi, Atatürk Bulvarı<br>No: 456, Kat: 3<br>06690 Çankaya/Ankara</p>
+                    <div class="office-contact">
+                        <p><i class="fas fa-phone"></i> +90 (312) 555 0123</p>
+                        <p><i class="fas fa-envelope"></i> ankara@entegroloji.com</p>
+                    </div>
+                </div>
+                
+                <div class="office-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="office-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h4>İzmir - Şube</h4>
+                    <p>Alsancak Mahallesi, Kıbrıs Şehitleri Caddesi<br>No: 789, Kat: 2<br>35220 Konak/İzmir</p>
+                    <div class="office-contact">
+                        <p><i class="fas fa-phone"></i> +90 (232) 555 0123</p>
+                        <p><i class="fas fa-envelope"></i> izmir@entegroloji.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Sık Sorulan Sorular</h2>
+                <p>En çok merak edilen konular hakkında bilgi alın</p>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="faq-question">
+                        <h4>Entegrasyon projesi ne kadar sürer?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Proje süresi, entegrasyonun karmaşıklığına ve kapsamına göre değişir. Basit API entegrasyonları 2-4 hafta, karmaşık ERP entegrasyonları ise 2-6 ay sürebilir.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="faq-question">
+                        <h4>Hangi ERP sistemleri ile entegrasyon yapıyorsunuz?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>SAP, Mikro, Logo, ETA, Oracle, Microsoft Dynamics, Sage, Infor gibi popüler ERP sistemleri ile entegrasyon yapıyoruz. Özel sistemler için de çözüm geliştiriyoruz.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="faq-question">
+                        <h4>Teknik destek hizmeti veriyor musunuz?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Evet, 7/24 teknik destek hizmeti veriyoruz. Acil durumlar için telefon desteği, genel sorular için e-posta ve uzaktan erişim desteği sağlıyoruz.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="faq-question">
+                        <h4>Veri güvenliği nasıl sağlanıyor?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>ISO 27001 sertifikalı güvenlik standartlarını uyguluyoruz. Tüm veri transferleri şifrelenir, güvenli API protokolleri kullanılır ve düzenli güvenlik denetimleri yapılır.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Projeleriniz İçin Hemen İletişime Geçin</h2>
+                <p>Uzman ekibimizle görüşün ve projeleriniz için en uygun çözümü birlikte geliştirelim.</p>
+                <div class="cta-buttons">
+                    <button class="btn btn-primary" onclick="openDemoModal()">Demo İste</button>
+                    <a href="tel:+902125550123" class="btn btn-secondary">
+                        <i class="fas fa-phone"></i>
+                        Hemen Ara
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-cogs"></i>
+                        <span>Entegroloji</span>
+                    </div>
+                    <p>Entegrasyon teknolojilerinde uzmanlaşmış ekibimizle işletmenizi dijital dönüşüme hazırlıyoruz.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Hizmetler</h4>
+                    <ul>
+                        <li><a href="services.html">Tüm Hizmetler</a></li>
+                        <li><a href="erp-integrations.html">ERP Entegrasyonları</a></li>
+                        <li><a href="avm-integrations.html">AVM Entegrasyonları</a></li>
+                        <li><a href="services.html">API Entegrasyonu</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Şirket</h4>
+                    <ul>
+                        <li><a href="about.html">Hakkımızda</a></li>
+                        <li><a href="contact.html">İletişim</a></li>
+                        <li><a href="#">Kariyer</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>İletişim</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> İstanbul, Türkiye</p>
+                        <p><i class="fas fa-phone"></i> +90 (212) 555 0123</p>
+                        <p><i class="fas fa-envelope"></i> info@entegroloji.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Entegroloji. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Demo Modal -->
+    <div id="demoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeDemoModal()">&times;</span>
+            <h2>Demo Talep Formu</h2>
+            <form id="demoForm" class="demo-form">
+                <div class="form-group">
+                    <label for="demoName">Ad Soyad *</label>
+                    <input type="text" id="demoName" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="demoCompany">Şirket Adı *</label>
+                    <input type="text" id="demoCompany" name="company" required>
+                </div>
+                <div class="form-group">
+                    <label for="demoEmail">E-posta *</label>
+                    <input type="email" id="demoEmail" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="demoPhone">Telefon</label>
+                    <input type="tel" id="demoPhone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="demoService">İlgilendiğiniz Hizmet</label>
+                    <select id="demoService" name="service">
+                        <option value="">Seçiniz</option>
+                        <option value="erp">ERP Entegrasyonları</option>
+                        <option value="avm">AVM Entegrasyonları</option>
+                        <option value="api">API Entegrasyonu</option>
+                        <option value="data">Veri Senkronizasyonu</option>
+                        <option value="custom">Özel Çözüm</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="demoMessage">Mesajınız</label>
+                    <textarea id="demoMessage" name="message" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Demo Talep Et</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Back to Top -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html> 
