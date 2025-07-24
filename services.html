@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hizmetler | Entegroloji</title>
+    <meta name="description" content="Entegroloji hizmetleri: ERP entegrasyonları, AVM mağaza entegrasyonları, API entegrasyonu ve veri senkronizasyonu çözümleri.">
+    <meta name="keywords" content="hizmetler, ERP entegrasyonu, AVM entegrasyonu, API entegrasyonu, veri senkronizasyonu">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2><i class="fas fa-cube"></i> Entegroloji</h2>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Ana Sayfa</a>
+                </li>
+                <li class="nav-item">
+                    <a href="services.html" class="nav-link active">Hizmetler</a>
+                </li>
+                <li class="nav-item">
+                    <a href="erp-integrations.html" class="nav-link">ERP Entegrasyonları</a>
+                </li>
+                <li class="nav-item">
+                    <a href="avm-integrations.html" class="nav-link">AVM Entegrasyonları</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">Hakkımızda</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">İletişim</a>
+                </li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="btn btn-outline" onclick="openDemoModal()">Demo İste</button>
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="breadcrumb">
+                    <a href="index.html">Ana Sayfa</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <span>Hizmetler</span>
+                </div>
+                <h1>Hizmetlerimiz</h1>
+                <p>İşletmenizin ihtiyaçlarına özel, modern ve güvenilir entegrasyon çözümleri. ERP, AVM, API ve veri entegrasyonları ile dijital dönüşümünüzü hızlandırın.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="services-overview">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-cogs"></i>
+                    <span>Entegrasyon Çözümleri</span>
+                </div>
+                <h2>Entegrasyon Hizmetlerimiz</h2>
+                <p>Farklı sistemler arasında güvenli ve hızlı veri akışı sağlayan kapsamlı entegrasyon çözümleri</p>
+            </div>
+            
+            <div class="services-list">
+                <div class="service-item" data-aos="fade-up">
+                    <div class="service-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>ERP Entegrasyonları</h3>
+                        <p>SAP, Mikro, Logo, ETA, Oracle ve diğer ERP sistemleri ile entegrasyon çözümleri. İşletmenizin ERP sistemi ile diğer sistemler arasında güvenli ve hızlı veri akışı sağlayın.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> SAP, Mikro, Logo, ETA, Oracle entegrasyonu</li>
+                            <li><i class="fas fa-check"></i> Otomatik veri senkronizasyonu</li>
+                            <li><i class="fas fa-check"></i> Gerçek zamanlı raporlama</li>
+                            <li><i class="fas fa-check"></i> Güvenli API bağlantıları</li>
+                        </ul>
+                        <a href="erp-integrations.html" class="service-link">
+                            Detayları Gör <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="service-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">
+                        <i class="fas fa-shopping-mall"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>AVM Mağaza Entegrasyonları</h3>
+                        <p>Büyük alışveriş merkezlerindeki mağazaların satış sistemleri ile ERP entegrasyonu. POS sistemleri, stok yönetimi ve satış raporlarının merkezi yönetimi.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> POS sistemleri entegrasyonu</li>
+                            <li><i class="fas fa-check"></i> Mağaza satış verilerinin ERP'ye aktarımı</li>
+                            <li><i class="fas fa-check"></i> Stok senkronizasyonu</li>
+                            <li><i class="fas fa-check"></i> Çoklu mağaza yönetimi</li>
+                        </ul>
+                        <a href="avm-integrations.html" class="service-link">
+                            Detayları Gör <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="service-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">
+                        <i class="fas fa-plug"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>API Entegrasyonu</h3>
+                        <p>Farklı sistemler arasında güvenli ve hızlı veri akışı sağlayan RESTful ve GraphQL API entegrasyon çözümleri. Modern API teknolojileri ile sistemlerinizi birleştirin.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> RESTful API Geliştirme</li>
+                            <li><i class="fas fa-check"></i> GraphQL Entegrasyonu</li>
+                            <li><i class="fas fa-check"></i> API Güvenlik ve Doğrulama</li>
+                            <li><i class="fas fa-check"></i> Webhook Entegrasyonu</li>
+                        </ul>
+                        <a href="#api-details" class="service-link">
+                            Detayları Gör <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="service-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Veri Senkronizasyonu</h3>
+                        <p>Verilerinizin tüm sistemlerde tutarlı ve güncel kalmasını sağlayan real-time senkronizasyon hizmetleri. Otomatik veri akışı ile operasyonel verimliliğinizi artırın.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Real-time Senkronizasyon</li>
+                            <li><i class="fas fa-check"></i> Veri Doğrulama ve Temizleme</li>
+                            <li><i class="fas fa-check"></i> Conflict Resolution</li>
+                            <li><i class="fas fa-check"></i> Backup ve Recovery</li>
+                        </ul>
+                        <a href="#data-details" class="service-link">
+                            Detayları Gör <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="service-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Bulut Entegrasyonu</h3>
+                        <p>Bulut tabanlı sistemlerinizi mevcut altyapınızla sorunsuz bir şekilde entegre edin ve ölçeklenebilirlik sağlayın. AWS, Azure, Google Cloud entegrasyonları.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> AWS Entegrasyonu</li>
+                            <li><i class="fas fa-check"></i> Azure Bağlantısı</li>
+                            <li><i class="fas fa-check"></i> Google Cloud Platform</li>
+                            <li><i class="fas fa-check"></i> Hybrid Cloud Çözümleri</li>
+                        </ul>
+                        <a href="#cloud-details" class="service-link">
+                            Detayları Gör <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="service-item" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Özel Çözümler</h3>
+                        <p>İşletmenizin özel ihtiyaçlarına göre tasarlanmış, ölçeklenebilir entegrasyon çözümleri. Mikroservis mimarisi ve DevOps entegrasyonu ile modern çözümler.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Özel Geliştirme</li>
+                            <li><i class="fas fa-check"></i> Mikroservis Mimarisi</li>
+                            <li><i class="fas fa-check"></i> DevOps Entegrasyonu</li>
+                            <li><i class="fas fa-check"></i> Legacy Sistem Entegrasyonu</li>
+                        </ul>
+                        <a href="#custom-details" class="service-link">
+                            Detayları Gör <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Details Sections -->
+    <section id="api-details" class="service-details">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-plug"></i>
+                    <span>API Entegrasyonu</span>
+                </div>
+                <h2>API Entegrasyon Çözümleri</h2>
+                <p>Modern API teknolojileri ile sistemlerinizi güvenli ve hızlı bir şekilde entegre edin</p>
+            </div>
+            
+            <div class="details-grid">
+                <div class="detail-card" data-aos="fade-up">
+                    <div class="detail-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>RESTful API Geliştirme</h3>
+                    <p>Standart HTTP protokolleri kullanarak güvenli ve ölçeklenebilir REST API'leri geliştiriyoruz.</p>
+                    <ul>
+                        <li>HTTP/HTTPS protokolleri</li>
+                        <li>JSON/XML veri formatları</li>
+                        <li>Stateless mimari</li>
+                        <li>RESTful best practices</li>
+                    </ul>
+                </div>
+                
+                <div class="detail-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="detail-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>GraphQL Entegrasyonu</h3>
+                    <p>GraphQL ile tek endpoint üzerinden esnek veri sorgulama ve manipülasyon imkanı sağlıyoruz.</p>
+                    <ul>
+                        <li>Tek endpoint</li>
+                        <li>Esnek sorgulama</li>
+                        <li>Real-time subscriptions</li>
+                        <li>Type-safe queries</li>
+                    </ul>
+                </div>
+                
+                <div class="detail-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="detail-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>API Güvenlik</h3>
+                    <p>OAuth 2.0, JWT token'ları ve rate limiting ile API'lerinizi güvenli hale getiriyoruz.</p>
+                    <ul>
+                        <li>OAuth 2.0 authentication</li>
+                        <li>JWT token management</li>
+                        <li>Rate limiting</li>
+                        <li>API versioning</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="data-details" class="service-details">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-database"></i>
+                    <span>Veri Senkronizasyonu</span>
+                </div>
+                <h2>Veri Senkronizasyon Çözümleri</h2>
+                <p>Farklı sistemler arasında verilerinizin tutarlı ve güncel kalmasını sağlayın</p>
+            </div>
+            
+            <div class="details-grid">
+                <div class="detail-card" data-aos="fade-up">
+                    <div class="detail-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3>Real-time Senkronizasyon</h3>
+                    <p>WebSocket ve event-driven mimari ile gerçek zamanlı veri senkronizasyonu sağlıyoruz.</p>
+                    <ul>
+                        <li>WebSocket bağlantıları</li>
+                        <li>Event-driven architecture</li>
+                        <li>Real-time updates</li>
+                        <li>Low latency</li>
+                    </ul>
+                </div>
+                
+                <div class="detail-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="detail-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Veri Doğrulama</h3>
+                    <p>Gelen verilerin doğruluğunu kontrol eden ve temizleyen sistemler geliştiriyoruz.</p>
+                    <ul>
+                        <li>Data validation rules</li>
+                        <li>Data cleaning</li>
+                        <li>Error handling</li>
+                        <li>Data quality metrics</li>
+                    </ul>
+                </div>
+                
+                <div class="detail-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="detail-icon">
+                        <i class="fas fa-undo"></i>
+                    </div>
+                    <h3>Backup ve Recovery</h3>
+                    <p>Veri kaybını önlemek için otomatik yedekleme ve kurtarma sistemleri kuruyoruz.</p>
+                    <ul>
+                        <li>Automated backups</li>
+                        <li>Point-in-time recovery</li>
+                        <li>Disaster recovery</li>
+                        <li>Data retention policies</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Entegrasyon Projenizi Başlatın</h2>
+                <p>Uzman ekibimizle entegrasyon ihtiyaçlarınızı değerlendirelim ve size özel çözümler sunalım.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary">
+                        <i class="fas fa-phone"></i>
+                        Ücretsiz Danışmanlık
+                    </a>
+                    <button class="btn btn-outline" onclick="openDemoModal()">
+                        <i class="fas fa-play"></i>
+                        Demo İste
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <h3><i class="fas fa-cube"></i> Entegroloji</h3>
+                    </div>
+                    <p>Entegrasyon çözümleri ile işletmenizin geleceğini şekillendirin. Modern teknolojiler ve uzman ekibimizle size en iyi hizmeti sunuyoruz.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Hizmetler</h4>
+                    <ul>
+                        <li><a href="erp-integrations.html">ERP Entegrasyonları</a></li>
+                        <li><a href="avm-integrations.html">AVM Entegrasyonları</a></li>
+                        <li><a href="services.html">API Entegrasyonu</a></li>
+                        <li><a href="services.html">Veri Senkronizasyonu</a></li>
+                        <li><a href="services.html">Bulut Entegrasyonu</a></li>
+                        <li><a href="services.html">Özel Çözümler</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Şirket</h4>
+                    <ul>
+                        <li><a href="about.html">Hakkımızda</a></li>
+                        <li><a href="about.html">Referanslar</a></li>
+                        <li><a href="contact.html">İletişim</a></li>
+                        <li><a href="#">Kariyer</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Basın</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Destek</h4>
+                    <ul>
+                        <li><a href="#">Dokümantasyon</a></li>
+                        <li><a href="#">API Referansı</a></li>
+                        <li><a href="#">SSS</a></li>
+                        <li><a href="#">Teknik Destek</a></li>
+                        <li><a href="#">Eğitim</a></li>
+                        <li><a href="#">Topluluk</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>İletişim</h4>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-envelope"></i> info@entegroloji.com</p>
+                        <p><i class="fas fa-phone"></i> +90 (212) 555 0123</p>
+                        <p><i class="fas fa-map-marker-alt"></i> İstanbul, Türkiye</p>
+                    </div>
+                    <div class="newsletter">
+                        <h5>Bültenimize Katılın</h5>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="E-posta adresiniz">
+                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 Entegroloji. Tüm hakları saklıdır.</p>
+                    <div class="footer-links">
+                        <a href="#">Gizlilik Politikası</a>
+                        <a href="#">Kullanım Şartları</a>
+                        <a href="#">Çerez Politikası</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Demo Modal -->
+    <div class="modal" id="demoModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Demo Talep Formu</h3>
+                <button class="modal-close" onclick="closeDemoModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="demoForm">
+                    <div class="form-group">
+                        <label for="demoName">Adınız *</label>
+                        <input type="text" id="demoName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="demoEmail">E-posta *</label>
+                        <input type="email" id="demoEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="demoCompany">Şirket</label>
+                        <input type="text" id="demoCompany">
+                    </div>
+                    <div class="form-group">
+                        <label for="demoService">İlgilendiğiniz Hizmet</label>
+                        <select id="demoService">
+                            <option value="">Seçiniz</option>
+                            <option value="erp">ERP Entegrasyonları</option>
+                            <option value="avm">AVM Entegrasyonları</option>
+                            <option value="api">API Entegrasyonu</option>
+                            <option value="data">Veri Senkronizasyonu</option>
+                            <option value="cloud">Bulut Entegrasyonu</option>
+                            <option value="custom">Özel Çözümler</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="demoMessage">Mesajınız</label>
+                        <textarea id="demoMessage" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Demo Talep Et</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html> 
